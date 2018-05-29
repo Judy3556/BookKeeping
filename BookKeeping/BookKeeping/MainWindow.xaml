@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="簡易記賬" Height="750" Width="450">
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        
         
     </Grid>
 </Window>
