@@ -24,5 +24,19 @@ namespace BookKeeping
         {
             InitializeComponent();
         }
+
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            TodoItem item = new TodoItem();
+            TodoItemList.Children.Add(item);
+        }
+
+        private void title_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
+        }
     }
 }
