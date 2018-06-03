@@ -20,6 +20,7 @@ namespace BookKeeping
     /// </summary>
     public partial class MainWindow : Window
     {
+        int money;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,6 +30,10 @@ namespace BookKeeping
         {
             TodoItem item = new TodoItem();
             TodoItemList.Children.Add(item);
+
+            string data = "";
+            MessageBox.Show(item.ItemnameTb.ToString());
+
         }
 
         private void title_MouseMove(object sender, MouseEventArgs e)
