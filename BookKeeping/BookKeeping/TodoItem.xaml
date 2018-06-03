@@ -15,7 +15,7 @@
             <ColumnDefinition Width="30"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBox x:Name="TimeTb" Grid.Column="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" BorderThickness="0" FontSize="20" Foreground="LightGray">Time</TextBox>
+        <TextBox x:Name="TimeTb" Grid.Column="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" BorderThickness="0" FontSize="20" Foreground="LightGray">M/D</TextBox>
         <TextBox x:Name="ItemnameTb" Grid.Column="2" VerticalContentAlignment="Center" BorderThickness="0" FontSize="20" Foreground="Gray">New</TextBox>
         <TextBox x:Name="PayTb" Grid.Column="3" VerticalContentAlignment="Center" HorizontalAlignment="Right" BorderThickness="0" FontSize="25" Foreground="#77F5EB">Pay</TextBox>
     </Grid>

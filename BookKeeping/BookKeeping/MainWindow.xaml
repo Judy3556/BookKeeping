@@ -15,10 +15,13 @@
         </Grid.RowDefinitions>
         <StackPanel x:Name="TodoItemList"></StackPanel>
         <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#196BA5">
-            <Button x:Name="AddBtn" Click="AddBtn_Click" Margin="20 20 300 20" Background="White" FontSize="40" Foreground="#196BA5">＋</Button>
-            <StackPanel>
-                <TextBlock Margin="10 10 10 10" FontSize="15" Foreground="White">總支出</TextBlock>
-                <TextBlock Margin="0 0 10 0" HorizontalAlignment="Right" FontSize="40" Foreground="White">0</TextBlock>
+            <Border CornerRadius="15,15,15,15" Margin="20 20" Width="60" Background="White">
+                <Button x:Name="AddBtn" Click="AddBtn_Click" Margin="5 3 7 9" BorderThickness="0" Background="White" FontSize="40" Foreground="#196BA5">＋</Button>
+            </Border>
+            
+            <StackPanel Width="330">
+                <TextBlock Margin="10 10 10 10" HorizontalAlignment="Right" FontSize="15" Foreground="White">總支出</TextBlock>
+                <TextBlock x:Name="AllmoneyTb" Margin="0 0 10 0" HorizontalAlignment="Right" FontSize="40" Foreground="White">0</TextBlock>
 
             </StackPanel>
             
