@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookKeeping"
         mc:Ignorable="d"
-        Title="簡易記賬" Height="750" Width="450">
-    <Grid>
+        Title="簡易記賬" Height="750" Width="450" Background="Transparent" WindowStyle="None" >
+    <Grid Background="White">
 
+        <!--定義版面區塊-->
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="100"></RowDefinition>
