@@ -24,5 +24,16 @@ namespace BookKeeping
         {
             InitializeComponent();
         }
+
+        public string ItemName
+
+        {
+            get
+            {
+                return ItemnameTb.Text;
+            }
+
+
+        }
     }
 }

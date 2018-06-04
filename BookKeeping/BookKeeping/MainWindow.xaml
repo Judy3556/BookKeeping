@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookKeeping"
         mc:Ignorable="d"
-        Title="簡易記賬" x:Name="title" MouseMove="title_MouseMove" Height="650" Width="450" Background="Transparent" WindowStyle="None" >
+        Title="簡易記賬" x:Name="title" Closed="title_Closed" MouseMove="title_MouseMove" Height="650" Width="450"  >
     <Grid Background="White">
 
         <!--定義版面區塊-->
@@ -13,19 +13,19 @@
             <RowDefinition></RowDefinition>
             <RowDefinition Height="100"></RowDefinition>
         </Grid.RowDefinitions>
+        
+        <!--上半部分列表區塊-->
         <StackPanel x:Name="TodoItemList"></StackPanel>
+
+        <!--下半部分區塊-->
         <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#196BA5">
             <Border CornerRadius="15,15,15,15" Margin="20 20" Width="60" Background="White">
                 <Button x:Name="AddBtn" Click="AddBtn_Click" Margin="5 3 7 9" BorderThickness="0" Background="White" FontSize="40" Foreground="#196BA5">＋</Button>
             </Border>
-            
             <StackPanel Width="330">
                 <TextBlock Margin="10 10 10 10" HorizontalAlignment="Right" FontSize="15" Foreground="White">總支出</TextBlock>
                 <TextBlock x:Name="AllmoneyTb" Margin="0 0 10 0" HorizontalAlignment="Right" FontSize="40" Foreground="White">0</TextBlock>
-
             </StackPanel>
-            
-
         </StackPanel>
         
     </Grid>
