@@ -54,7 +54,17 @@ namespace BookKeeping
                 data += "|" + item.TimeTb + "|" + item.ItemnameTb + "|" + item.PayTb + "\r\n";
                 datas.Add(data);
             }
-            System.IO.File.WriteAllLines(@"C:\Users\pc-01\Desktop\cc", datas);
+            System.IO.File.WriteAllLines(@"C:\Users\pc-01\Desktop\cc.txt", datas);
+        }
+
+        private void title_Loaded(object sender, RoutedEventArgs e)
+        {
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\pc-01\Desktop\cc.txt");
+            foreach(string line in lines)
+            {
+                string[] parts = line.Split('|');
+                TodoItem item = new TodoItem();
+            }
         }
     }
 }
