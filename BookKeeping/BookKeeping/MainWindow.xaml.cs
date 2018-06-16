@@ -32,7 +32,7 @@ namespace BookKeeping
             TodoItem item = new TodoItem();
             TodoItemList.Children.Add(item);
 
-
+            
         }
 
         // 視窗移動
@@ -44,7 +44,7 @@ namespace BookKeeping
             }
         }
 
-        //關閉視窗
+        // 關閉視窗
         private void title_Closed(object sender, EventArgs e)
         {
             string data = "";
@@ -55,7 +55,7 @@ namespace BookKeeping
             System.IO.File.WriteAllText(@"C:\Users\pc-01\Desktop\cc.txt", data);
         }
 
-        //讀取
+        // 讀取存檔
         private void title_Loaded(object sender, RoutedEventArgs e)
         {
             string[] lines = System.IO.File.ReadAllLines(@"C:\Users\pc-01\Desktop\cc.txt");
@@ -63,6 +63,12 @@ namespace BookKeeping
             {
                 string[] parts = line.Split('|');
                 TodoItem item = new TodoItem();
+
+                // 金額的運算
+                item.PayTb.Text = parts[3];
+                money +=int.Parse( parts[3]);
+                AllmoneyTb.Text = money.ToString(); 
+
                 TodoItemList.Children.Add(item);
             }
         }
