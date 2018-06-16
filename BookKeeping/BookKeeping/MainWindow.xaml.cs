@@ -50,7 +50,7 @@ namespace BookKeeping
             string data = "";
             foreach(TodoItem item in TodoItemList.Children)
             {
-                data += "|" + item.TimeTb + "|" + item.ItemnameTb + "|" + item.PayTb + "\r\n";
+                data += "|" + item.TimeTb.Text + "|" + item.ItemnameTb.Text + "|" + item.PayTb.Text + "\r\n";
             }
             System.IO.File.WriteAllText(@"C:\Users\pc-01\Desktop\cc.txt", data);
         }
