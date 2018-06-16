@@ -48,15 +48,14 @@ namespace BookKeeping
         private void title_Closed(object sender, EventArgs e)
         {
             string data = "";
-            List<String> datas = new List<string>();
             foreach(TodoItem item in TodoItemList.Children)
             {
                 data += "|" + item.TimeTb + "|" + item.ItemnameTb + "|" + item.PayTb + "\r\n";
-                datas.Add(data);
             }
-            System.IO.File.WriteAllLines(@"C:\Users\pc-01\Desktop\cc.txt", datas);
+            System.IO.File.WriteAllText(@"C:\Users\pc-01\Desktop\cc.txt", data);
         }
 
+        //讀取
         private void title_Loaded(object sender, RoutedEventArgs e)
         {
             string[] lines = System.IO.File.ReadAllLines(@"C:\Users\pc-01\Desktop\cc.txt");
@@ -64,6 +63,7 @@ namespace BookKeeping
             {
                 string[] parts = line.Split('|');
                 TodoItem item = new TodoItem();
+                TodoItemList.Children.Add(item);
             }
         }
     }
