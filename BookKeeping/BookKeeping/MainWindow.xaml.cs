@@ -32,10 +32,7 @@ namespace BookKeeping
             TodoItem item = new TodoItem();
             TodoItemList.Children.Add(item);
 
-            
         }
-
-
 
         // 關閉視窗
         private void title_Closed(object sender, EventArgs e)
@@ -66,6 +63,7 @@ namespace BookKeeping
             }
         }
 
+        // 移動窗口
         private void title_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
