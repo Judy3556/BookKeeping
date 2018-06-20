@@ -71,5 +71,15 @@ namespace BookKeeping
                 this.DragMove();
             }
         }
+
+        private void title_MouseEnter(object sender, MouseEventArgs e)
+        {
+            int pay=0;
+            foreach(TodoItem item in TodoItemList.Children)
+            {
+                pay += int.Parse(item.PayTb.Text);
+                AllmoneyTb.Text = pay.ToString();
+            }
+        }
     }
 }
