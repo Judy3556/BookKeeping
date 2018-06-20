@@ -35,14 +35,7 @@ namespace BookKeeping
             
         }
 
-        // 視窗移動
-        private void title_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                this.DragMove();
-            }
-        }
+
 
         // 關閉視窗
         private void title_Closed(object sender, EventArgs e)
@@ -70,6 +63,14 @@ namespace BookKeeping
                 AllmoneyTb.Text = money.ToString(); 
 
                 TodoItemList.Children.Add(item);
+            }
+        }
+
+        private void title_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
             }
         }
     }
