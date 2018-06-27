@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookKeeping"
         mc:Ignorable="d"
-        Title="簡易記賬" x:Name="title" MouseEnter="title_MouseEnter" Closed="title_Closed" Loaded="title_Loaded" MouseLeftButtonDown="title_MouseLeftButtonDown" Height="650" Width="450"  >
+        Title="簡易記賬" x:Name="title" MouseEnter="title_MouseEnter" Closed="title_Closed"  Loaded="title_Loaded" MouseLeftButtonDown="title_MouseLeftButtonDown" Height="650" Width="450"  >
     <Grid Background="White">
 
         <!--定義版面區塊-->
@@ -20,7 +20,13 @@
         <!--下半部分區塊-->
         <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#196BA5">
             <Border CornerRadius="15,15,15,15" Margin="20 20" Width="60" Background="White">
-                <Button x:Name="AddBtn" Click="AddBtn_Click" Margin="5 3 7 9" BorderThickness="0" Background="White" FontSize="40" Foreground="#196BA5">＋</Button>
+                <Button x:Name="AddBtn" Click="AddBtn_Click" Margin="5 3 7 9" HorizontalAlignment="Center" BorderThickness="0" Background="White" FontSize="40" Foreground="#196BA5">＋
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </Border>
             <StackPanel Width="330">
                 <TextBlock Margin="10 10 10 10" HorizontalAlignment="Right" FontSize="15" Foreground="White">總支出</TextBlock>
