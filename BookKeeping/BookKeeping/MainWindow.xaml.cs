@@ -31,6 +31,7 @@ namespace BookKeeping
         {
             TodoItem item = new TodoItem();
             TodoItemList.Children.Add(item);
+            item.TimeTb.Text = DateTime.Today.ToString();
 
         }
 
